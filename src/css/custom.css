@@ -27,6 +27,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
 }
 /* Imports*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
@@ -42,7 +43,22 @@ img {
     max-width: 100%;
 }
 
+.heroBanner_src-pages-index-module {
+    padding:0 !important;
+}
 
+body {
+    background-color: unset;
+    color: var(--ifm-font-color-base) !important;
+}
+
+.text-center {
+    color: var(--ifm-font-color-base) !important;
+}
+
+#__docusaurus > div.main-wrapper > main > div.inline-block > div.fiftypcthz.float-right {
+    color: var(--ifm-font-color-base) !important;
+}
 
 
 
@@ -81,14 +97,14 @@ img {
 }
 
 .white-text {
-    color: #fff;
+    color: #fff !important;
     text-align: center;
     margin: 0 auto;
     font-size: x-large
 }
 
 .white-text-md {
-    color: #fff;
+    color: #fff !important;
     text-align: center;
     margin: 0 auto
 }
@@ -834,3 +850,7 @@ padding-bottom: unset;}
 .title_with_emoji {
     text-align: right;
 white-space: nowrap;}
+
+table td {
+    vertical-align: top;
+}

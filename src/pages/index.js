@@ -37,8 +37,8 @@ export default function Home() {
         
         <div className="container-fluid">
         <div className="row">
-            <div className="col-lg"><img alt="Academy of Learning Career College logo" src="../images/Academt-of-Learning---final-logo-.webp" width="100%" /></div>
-            <div className="col">
+            
+            
                 <h1 className="text-center">ACADEMY OF LEARNING CAREER COLLEGE</h1>
                 <h2 className="text-center orange-text">Canada's Largest Career College Network.</h2>
                 <p className="text-center">At Academy of Learning, we attribute our rapid growth to our success in identifying and filling the gap between the formal education currently available in Canada and the realities of the working world. We provide learners the solutions
@@ -46,13 +46,10 @@ export default function Home() {
                 <p className="text-center">In today's business world, where quality training is not only important but essential to career success, Academy of Learning Career College stands out as a training provider relied on by students, employers and government agencies. No
                     other private post-secondary college can match the variety of programs that Academy of Learning Career College offers. Students can choose from over 30 diploma and certificate programs offered at Academy of Learning Career College.</p>
                 <p>&nbsp;</p>
-                <p className="text-center"><a className="btn btn-primary btn-lg orange-btn" href="aboutus.html" role="button">ABOUT AOLCC</a></p>
-            </div>
+                <p className="text-center"><a className="btn btn-primary btn-lg orange-btn" href="/aboutus" role="button">ABOUT AOLCC</a></p>
+            
         </div>
-    </div>
 
-    
-    <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-12 mb-4 mt-2 text-center">
                     <h2>FEATURES</h2>

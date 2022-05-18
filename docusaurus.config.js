@@ -63,14 +63,6 @@ const config = {
             to: "/"
           },
           {
-            type: 'doc',
-            docId: 'Handbook/index',
-            position: 'right',
-            label: 'Handbook',
-          },
-          {
-
-
             label: "CALL US",
             items: [
               {
@@ -82,12 +74,57 @@ const config = {
                 to: 'tel:16045324040'
               }
             ]
-
-
-
-
-
-          }
+            },
+          {
+            label: "Locations",
+            to: "/locations"
+          },
+          {
+            label: "About Us",
+            to: "/aboutus"
+          },
+          {
+            label: "myAOLCC",
+            to: "https://my.aolcc.ca"
+          },
+          {
+            type: 'doc',
+            docId: '/category/health-and-safety',
+            label: 'Health & Safety',
+          },
+          
+          
+          {
+            label: "Student Resources",
+            items: [
+              {
+                type: 'html',
+                value: "<a href='ms-windows-store://pdp/?ProductId=9P7BP5VNWKX5&mode=mini' class='dropdown__link'>QuickAssist</a>"
+                
+              },
+              {
+                label: 'Attendance Tracker',
+                href: 'https://acmeweb.academyoflearning.net/Forms/AttendanceLogin.aspx'
+              },
+              {
+                label: 'Student Handbook',
+                to: 'docs/Handbook'
+              },
+              {
+                type: 'html',
+                value: "<hr />"
+                
+              },
+              {
+                label: 'LockDown Browser Installer',
+                href: 'https://download.respondus.com/lockdown/download.php?id=281950612'
+              },
+              {
+                label: 'Typing Trainer Installer',
+                href: 'https://meshcentral.aolccbc.com/TypingTrainer.exe'
+              }
+            ]
+            }
 
 
         ],
