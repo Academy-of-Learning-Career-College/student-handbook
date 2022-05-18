@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaolcc_handbook=self.webpackChunkaolcc_handbook||[]).push([[1252],{4574:function(o){o.exports=JSON.parse('{"permalink":"/student-handbook/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

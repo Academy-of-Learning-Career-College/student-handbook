@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaolcc_handbook=self.webpackChunkaolcc_handbook||[]).push([[2216],{9869:function(o){o.exports=JSON.parse('{"permalink":"/student-handbook/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

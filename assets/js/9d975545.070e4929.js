@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaolcc_handbook=self.webpackChunkaolcc_handbook||[]).push([[8593],{8763:function(a){a.exports=JSON.parse('{"label":"hola","permalink":"/student-handbook/blog/tags/hola","allTagsPath":"/student-handbook/blog/tags","count":1}')}}]);
