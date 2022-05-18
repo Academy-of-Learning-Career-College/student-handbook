@@ -1,2 +1,0 @@
-# Fees
-Where a student has been expelled by the college, the student will be considered withdrawn from their program as of the effective date of the expulsion. The college will be required to calculate the student's account as of the official withdrawal date of the expulsion based on the College's Fee Refund Policy, as prescribed by the *Private Training Act*.

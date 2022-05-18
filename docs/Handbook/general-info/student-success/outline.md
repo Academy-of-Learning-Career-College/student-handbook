@@ -1,8 +1,0 @@
-# Program Outline and Progress Report
-A Program Outline is issued to you at the start of your program. It will include target start dates and end dates for each course. This is the date when your course examination should take place.
-
-It is your responsibility to adhere to these timelines as closely as possible in order to complete each course by the prescribed end date. Dialogue between you and the Learning Coaches or Instructors is ongoing. You will have many opportunities for discussion, assessment and feedback in a comfortable environment. Depending on your progress, this could occur daily, weekly or monthly.
-
-Regular feedback is provided by college staff, as well as providing any explanations, encouragement and guidance through the selected material. This is meant to help you to monitor your own progress, and where applicable, schedule additional study hours to improve progress. While you are also responsible for maintaining satisfactory academic progress in your program, college staff will suggest changes to ensure academic success and completion. If you feel you are falling behind or are not coping with your schedule, please discuss this with us as soon as possible. You may request a progress report at any time.
-
-The school reserves the right to schedule the courses within your program of study, in such order as we may deem appropriate. We may modify our curriculum, programs, start dates, rules and regulations, whenever we deem it necessary, without notice, and subject to required approval from our provincial regulators.

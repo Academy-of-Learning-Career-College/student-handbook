@@ -1,6 +1,0 @@
-# Employment Preparation/Assistance
-A variety of resources have been put into place to assist students to prepare for employment. The Academy of Learning® Career College provides training on the job search process and techniques prior to graduation. This includes resume preparation and workshops such as Thought Patterns for a Successful Career. Some programs may include a practicum or preceptorship, as a positive way to prepare for employment. Colleges also follow up with students after graduation to encourage them with their job search.
-
-Colleges maintain Job Boards in student areas to assist you with your job search. Students, graduates, and alumni, who may apply for any of the suitable posted jobs. These jobs are acquired from advertisements, from employers who call Academy of Learning® Career College campuses directly with job orders, or through people hired by the Academy of Learning® Career College. Please do not remove jobs from the board. Simply give the job number to one of the staff who will provide you with the required information.
-
-Staff at individual colleges is also available to help graduates find appropriate job placement after they have completed their training. Students, graduates and alumni are also welcomed to use the internet at their college while pursuing their job search.

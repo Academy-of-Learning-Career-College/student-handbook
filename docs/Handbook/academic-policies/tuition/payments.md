@@ -1,8 +1,0 @@
-# Tuition Payment, Inquiries and Deferments
-Tuition is due according to the terms and conditions of the Student Payment Schedule as outlined on the Enrolment Contract. Students are expected to make payments on time; however, if financial difficulties arise, speak to the Director of the college. Receipts will be provided each time monies are received. (Excludes students funded through a sponsoring agency).
-
-The Campus Director can provide up-to-date and accurate information on tuition accounts. An account statement can be requested at any time. Tuition fees qualify for a federal tax credit. You are also entitled to an educational status credit for each month that you attend. Tuition receipts (T2202) for income tax purposes will be sent to students who have made payments in the previous calendar year. These are generally available in mid to late February. Students funded by a third party will not receive tuition receipts for income tax purposes. (Workers' Compensation, Band, Insurance or Corporate)
-
-Deferment of tuition is generally given to students who have applied for financial assistance through the student loans program but have not received loan documents by the first day of class. Tuition is also deferred for students who have been sponsored by an agency. There is no charge for this deferment.
-
-Students who do not pay fees as agreed or do not make satisfactory arrangements to pay tuition and other charges (lab fees, textbooks, etc.) will be suspended or dismissed.

@@ -1,2 +1,0 @@
-# Special Needs
-The college is committed to a philosophy that everyone should have the right and opportunity of improving their lives through better, more potentially rewarding employment. We will do what we can to accommodate physically challenged students. Written transcripts of all courses can be requested when audio material is insufficient for student needs. Please speak to any of the college staff for assistance.

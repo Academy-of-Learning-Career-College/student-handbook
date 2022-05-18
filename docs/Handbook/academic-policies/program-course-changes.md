@@ -1,8 +1,0 @@
-# Programs or Course Changes
-Every request for a diploma program or course change will be considered, provided you have discussed the feasibility of the change with the Campus Director. You will be asked to provide a written request outlining your reasons and how this change will help you achieve your career goals. If your request is approved, you will be required to complete a new registration contract.
-
-Students that are sponsored must obtain written permission from their sponsoring agency and submit it with their written request for a course change.
-
-*Any or all of the courses which you have completed, may be applied to the new diploma program (CPL; see the [Academic Exemption (Credit for Prior Learning – CPL)](academic-exemption-credit-for-prior-learning-cpl.md) section), provided they are listed on the new diploma selection list.*
-
-You should be aware that any changes to your program after you commence classes may affect your sponsorship or student loan funding. Check with our admissions department, the Financial Aid Office, or your sponsor before you reach your final decision.

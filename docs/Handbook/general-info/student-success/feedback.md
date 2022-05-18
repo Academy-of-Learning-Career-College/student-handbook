@@ -1,2 +1,0 @@
-# Student Feedback
-Each student can suggest improvements or voice their concerns. This is considered a very important part of our effort to continually improve wherever we can. You are welcomed to discuss your idea or concern with a Learning Coach. If further action is required, you may make an appointment to speak with the Director.

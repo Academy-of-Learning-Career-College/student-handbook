@@ -1,2 +1,0 @@
-# Consideration for Others
-Academy of Learning® Career College aims to provide the best possible learning environment for our students. We ask for cooperation in this endeavor. Please be considerate of fellow students to maintain a quiet learning environment and do not disturb other students. Please be especially considerate of students writing exams. Keep conversations to the social areas designated by the college.

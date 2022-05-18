@@ -1,2 +1,0 @@
-# Digital Cameras and Cell Phone Cameras
-Use of digital cameras and cell phone cameras in the lab area/classroom is not permitted. Please respect the rights of others when it comes to their privacy. Also, screen shots of exams are not allowed as all material is protected by copyright. If you are having trouble with an examination, please ask a Learning Coach, and he or she will direct you on how to properly create a screen shot should a Help Desk inquiry need to be made.

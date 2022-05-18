@@ -1,4 +1,0 @@
-# Storage Mediums
-The use of any storage mediums, other than those which form part of our curriculum, is totally prohibited. Any unapproved copy of the course material, whether physical or digital, will be viewed as reproduction of Academy of Learning® Career College courseware, and may face dismissal. Outside storage mediums may introduce viruses/malware to the college's networked systems. Please show consideration as computer downtime adds unnecessary delay to your and others' study periods.
-
-If you believe the use of a storage medium is necessary, please speak to the Learning Coaches and we are happy to discuss the usage or offer alternative to suit your need.

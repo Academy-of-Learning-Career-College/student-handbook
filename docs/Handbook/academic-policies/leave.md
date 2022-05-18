@@ -1,8 +1,0 @@
-# Interruption and Resumption of Studies
-Any prolonged period of non-attendance from scheduled classes for more than 5 days constitutes an interruption. The college will notify the sponsoring agencies and/or student loan providers after 5 days of absenteeism (or sooner, depending on the agency's policy).
-
-If, for any reason, you must interrupt your studies, but wish to return to them later, please ensure that you follow the appropriate procedure to obtain a leave of absence. Contact the Campus Director at your college for this purpose. Also, please note that an interruption may affect your eligibility for further funding. Check with the Campus Director or your sponsor for more information regarding your interruption of studies.
-
-If you did obtain a leave of absence, and are ready to resume your studies later, you must decide through the Campus Director as soon as you are sure of your return date. Your new start date will depend upon seating and equipment availability.
-
-If a leave of absence was not granted, or you were not in good financial or academic standing at the time you interrupted your studies, you may apply to resume studies by submitting a written request. This written request must explain any reasons and/or mitigating circumstances which prevented you from obtaining a leave of absence. You will be advised of the final decision, and should you be re-admitted, you may be advised of any conditions that you must meet.

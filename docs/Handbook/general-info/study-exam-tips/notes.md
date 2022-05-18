@@ -1,2 +1,0 @@
-# Note Taking
-You may feel secure to write down everything said on the audio/video files. It is likely you will fail to grasp the concepts and key details. We encourage you to only take notes on key points.
