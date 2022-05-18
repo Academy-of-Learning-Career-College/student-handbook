@@ -9,7 +9,7 @@ const config = {
   title: 'Academy of Learning Career College',
   tagline: 'Canada\'s Largest Career College Network',
   url: 'https:/academy-of-learning-career-college.github.io',
-  baseUrl: '/',
+  baseUrl: '/student-handbook/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
