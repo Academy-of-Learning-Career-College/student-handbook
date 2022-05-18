@@ -1,11 +1,13 @@
 # Preventing and Responding to Sexual Violence and Misconduct Policy
 
-|||
-|-|-|
-| Name of Policy | Preventing and responding to sexual violence and misconduct policy| 
-| Last Revision	| August 18, 2021| 
-| Implementation Date	| 	August 18, 2021| 
-| Position(s) Responsible |	Executive Director, SEA| 
+
+<table>
+<tr><td>Name of Policy</td><td>Preventing and responding to sexual violence and misconduct policy</td></tr>
+<tr><td>Last Revision</td><td>August 18, 2021</td></tr>
+<tr><td>Implementation Date</td><td>August 18, 2021</td></tr>
+<tr><td>Position Responsible</td><td>Executive Director, SEA</td></tr>
+
+</table>
 
 ## Purpose Statement
 Academy of Learning® Career College wishes to confirm its responsibility to provide a safe and secure learning environment. At Academy of Learning® Career College, we firmly believe that there should be a safe environment for all the students, which is free from any kind of sexual misconduct as the college has zero tolerance towards this kind of misconduct.
@@ -42,9 +44,17 @@ The person who wishes to disclose sexual misconduct or make a formal report agai
 - If the perpetrator is a visitor, whom the Academy of Learning® Career College authorities cannot access, the information of the visitor will be given to the local police along with the copy of the complaint, if the complainant agrees to this.
 - The information of the complainant will be kept confidential according to the Freedom of Information and Protection of Privacy Act, unless, it becomes mandatory by law to disclose the information to get full justice to the complainant. If required, the complainant will be given to counseling or emergency medical care to overcome the mental or physical problems faced by the complainant due to the incident.
 - Available Services:
-    - Emergency Services: 911
+    - Emergency Services:
+      - 911
     - Local Hospitals:
-        - Abbotsford Regional Hospital and Cancer Centre - 32900 Marshall Road - 604-851-4700
-        - Langley Memorial Hospital - 22051 Fraser Hwy - 604-514-6000
-    - Mental Health Service: here2talk.ca - 1-877-857-3397
-    - Fraser Health Sexual Assault Services: [fraserhealth.ca/health-topics-a-to-z/sexual-assault-and-violence/sexual-assault-and-violence-resources](https://fraserhealth.ca/health-topics-a-to-z/sexual-assault-and-violence/sexual-assault-and-violence-resources)
+        - Abbotsford Regional Hospital and Cancer Centre 
+           - 32900 Marshall Road
+           - 604-851-4700
+        - Langley Memorial Hospital 
+           - 22051 Fraser Hwy
+           - 604-514-6000
+    - Mental Health Service: 
+      - here2talk.ca
+      - 1-877-857-3397
+    - Fraser Health Sexual Assault Services: 
+      - [fraserhealth.ca/health-topics-a-to-z/sexual-assault-and-violence/sexual-assault-and-violence-resources](https://fraserhealth.ca/health-topics-a-to-z/sexual-assault-and-violence/sexual-assault-and-violence-resources)
