@@ -1,0 +1,4 @@
+# Hours of Attendance
+Class hours for Learning Coach or Instructor-led classes will be at the sole discretion of the college. You will be required to attend the classes according to the timetable set by the college. Students are responsible for making up the time they miss, and for arranging to collect any handouts or notes. If you have questions about the hours of operation at your campus, simply ask a Learning Coach.
+
+A student may be placed on probation if the college believes the student has abused any part of the attendance policy. If the problem(s) persists after being placed on probation, a student may be dismissed. A student will be given every chance to remedy his/her situation. A verbal warning and a written warning will be issued before a student is dismissed for a violation of the attendance policy. Please refer to the complete [DISMISSAL/EXPULSION POLICY](dismissal-expulsion-policy) of this handbook.

@@ -1,6 +1,8 @@
-# Introduction 
-
-## Policies, Procedures and Helpful Tips
+---
+sidebar_label: Student Handbook
+sidebar_position: 2
+---
+# Policies, Procedures and Helpful Tips
 Congratulations and Welcome to the Academy of Learning® Career College
 
 Thank you for choosing Academy of Learning® Career College for your training needs. We will strive to ensure that all your training needs are met.

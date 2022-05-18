@@ -1,0 +1,6 @@
+# Cell Phones and Personal Data Devices
+Cell Phones, Smartphones, and all other electronic devices must be turned off or set to silent mode (vibrate mode is not acceptable, as it still disturbs others), while at the campus. If there is an anticipated emergency, please advise the office before the start of the class. All cellphones must be kept on the silent function and text messaging/instant messaging should be kept to a bare minimum.
+
+Vibrating/noise making cell phones and in-class texting is a distraction to other students and staff if the phone is on the workstation or you are texting and/or receiving texts continuously. Please respect fellow classmates and keep the cell phone from disturbing others. All conversations must be taken out of the classroom. Any student who disrupts or interferes with a class, lab or activity will be asked to turn off the device, and possibly also to leave the class, lab or activity. Repeated offenses will result in disciplinary action up to and including expulsion.
+
+The definition of electronic devices includes, but not limited to cellular phones, smartphones, computer tablets, personal laptops, portable music player, portable speakers, portable radios, walkie-talkies, etc.

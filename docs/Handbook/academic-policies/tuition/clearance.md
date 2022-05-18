@@ -1,0 +1,2 @@
+# Financial Clearance
+Graduating students must be in good financial standing before a diploma or certificate is issued. Graduating students should check with the Campus Director/Finance Office when they finish their programs to ensure their account is cleared and/or up to date. If a student's account is not cleared, arrangements must be made with the Campus Director.

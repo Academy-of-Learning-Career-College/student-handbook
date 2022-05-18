@@ -1,0 +1,2 @@
+# Treatment of Books and Equipment
+A student who is expelled is responsible for the return of any college equipment or books (which are unopened and in the same state they were supplied) within 10 days of expulsion from the program. If not, the student will be held financially responsible.

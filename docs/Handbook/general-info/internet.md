@@ -1,0 +1,2 @@
+# Internet and Email
+Your college has provided you with internet and email access to assist you in completing your course assignments. Please refrain from using these tools for your own personal use. Downloading and streaming anything through the Internet that is not per the instructions in the courseware or without Learning Coach pre-approval is prohibited. This constitutes non-compliance of school regulations in terms of our Dismissal policy and as such is grounds for immediate termination of your program.

@@ -1,0 +1,38 @@
+# Admissions Requirements
+To qualify for admission into any diploma or certificate course or program, all applicants must attend an initial interview and receive a positive recommendation from the Campus Admissions Department. The minimum admission requirements are:
+
+ - An understanding of the English language. See the English Proficiency Section.
+ - Grade 12 diploma or equivalent. Applicants must provide proof prior to enrolling. OR
+ - Passing grade on the entrance exam if a mature student, 19 years of age or older and having been out of high school for a minimum of one year. Proof of age is required. This entrance exam also applies to residents who are unable to obtain a copy of their high school diploma or transcript, or do not qualify under the international admission of requirements list of countries and certificates. The minimum passing grade for this examination is 75 %.
+ - Can work with an individualized learning system and be able to follow instruction.
+ - Applicants for more specialized programs such as the HealthCare, Community Support Worker, Addictions Worker, and IT programs will be further evaluated on specific criteria and testing related to individual program requirements, and pre-requisites.
+
+Some programs may also have additional entrance requirements or prerequisite courses. In addition to the above Academy of Learning® Career College admissions requirements, the following is a list of specific requirements needed for individual Academy of Learning® Career College programs:
+
+ - Medical Office Assistant Diploma
+ - Medical Office Assistant Diploma with Unit Clerk
+    - Mature students must successfully complete a Scholastic Level Exam and a Canadian Achievement Survey Test.
+    - Clear Criminal Record Check with vulnerable sector.
+    - Hepatitis B, COVID-19, etc vaccination (prior to clinical placement).
+
+- Community Service Worker and Addition Worker Diploma
+    - Mature students must successfully complete a Scholastic Level Exam and a Canadian Achievement Survey Test.
+    - Clear Criminal Record Check with vulnerable sector.
+    - TB test (prior to clinical placement).
+
+- Computer Service Technician Diploma
+- Network Administrator Diploma
+- PC Support Specialist Diploma
+- Web Design Diploma
+- Graphic Design Diploma
+- Software and Web Developer Diploma
+    - Good command of the English language
+    - Ability to work with integrated learning system or online learning.
+
+Where a program has a work component or is delivered in whole or in part at another location, the student will be advised of this information in the admissions process.
+
+Applicants, who are not suitable, do not meet the entrance requirements, or who decide to pursue other training options may be referred to other resources or to an alternate training institution. If an applicant fails to meet Academy of Learning® Career College's admissions requirements, they may not be enrolled at Academy of Learning® Career College based on the Admissions Policy being waived.
+
+In order to enroll in an individual course that is part of an approved career program, an applicant must still have a grade 12 high school Diploma, or equivalent, or Mature Student status, and must attend a personal interview.
+
+If a student taking one or more individual courses wishes to enroll in a Diploma-level or Certificate-level program, the student must meet the program's Admissions Requirements.

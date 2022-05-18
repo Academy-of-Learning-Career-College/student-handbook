@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Academy of Learning | Student Handbook',
+  title: 'Academy of Learning Career College',
   tagline: 'Canada\'s Largest Career College Network',
   url: 'https://aolccbc.com',
   baseUrl: '/',
@@ -34,12 +34,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-         
-         
+
+
         },
         blog: {
           showReadingTime: true,
-         
+
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -59,77 +59,98 @@ const config = {
         },
         items: [
           {
+            label: "Home",
+            to: "/"
+          },
+          {
             type: 'doc',
-            docId: 'Handbook/intro',
-            position: 'left',
+            docId: 'Handbook/index',
+            position: 'right',
             label: 'Handbook',
           },
           {
-            
-              
-                label : "CALL US",
-                items: [
-                  { 
-                    label: 'Abbotsford - 604-855-3315',
-                    to: 'tel:16048553315'
-                  },
-                  { 
-                    label: 'Langley - 604-532-4040',
-                    to: 'tel:16045324040'
-                  }
-                ]
-                
-              
-            
 
-            
+
+            label: "CALL US",
+            items: [
+              {
+                label: 'Abbotsford - 604-855-3315',
+                to: 'tel:16048553315'
+              },
+              {
+                label: 'Langley - 604-532-4040',
+                to: 'tel:16045324040'
+              }
+            ]
+
+
+
+
+
           }
-          
-        
+
+
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Langley',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '604-532-4040',
+                to: 'tel:16045324040',
+              },
+              {
+                label: '#201-20621 Logan Ave',
+                to: 'https://g.page/aolcclangley?share',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Privacy Policy',
+                to: '/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Sexual Harassment Policy',
+                href: '/docs/Handbook/general-info/health-and-safety/sexual-harrassment',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Student Statement of Rights',
+                to: '/docs/student-statement-of-rights',
+              },
+              {
+                label: 'Refund Policy',
+                href: '/',
+              },
+              {
+                label: 'System Requirements',
+                href: '/',
+              },
+              {
+                label: 'Certified with the Private Training Institutions Branch (PTIB) of the BC Ministry of Advanced Education and Skills Training',
+                href: 'https://www.privatetraininginstitutions.gov.bc.ca',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Abbotsford',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '604-855-3315',
+                href: 'tel:16045324040',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: '#204-2692 Clearbrook Road',
+                href: 'https://goo.gl/maps/RyQKvXxeWe7oUT867',
               },
             ],
           },
+          
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Academy of Learning Career College.`,
       },
