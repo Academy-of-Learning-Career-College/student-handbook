@@ -138,11 +138,11 @@ const config = {
             items: [
               {
                 label: '604-532-4040',
-                to: 'tel:16045324040',
+                href: 'tel:16045324040',
               },
               {
                 label: '#201-20621 Logan Ave',
-                to: 'https://g.page/aolcclangley?share',
+                href: 'https://g.page/aolcclangley?share',
               },
             ],
           },
@@ -151,7 +151,11 @@ const config = {
             items: [
               {
                 label: 'Privacy Policy',
-                to: '/',
+                to: '/docs/Handbook/privacy-policy',
+              },
+              {
+                label: 'Dispute Resolution Policy',
+                to: '/docs/Handbook/academic-policies/dispute-resolution',
               },
               {
                 label: 'Sexual Harassment Policy',
@@ -163,16 +167,12 @@ const config = {
               },
               {
                 label: 'Refund Policy',
-                href: '/',
+                href: '/docs/Handbook/academic-policies/refunds',
               },
               {
                 label: 'System Requirements',
-                href: '/',
-              },
-              {
-                label: 'Certified with the Private Training Institutions Branch (PTIB) of the BC Ministry of Advanced Education and Skills Training',
-                href: 'https://www.privatetraininginstitutions.gov.bc.ca',
-              },
+                href: '/docs/Handbook/general-info/system-requirements',
+              }
             ],
           },
           {
@@ -190,7 +190,7 @@ const config = {
           },
           
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Academy of Learning Career College.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Academy of Learning Career College. <br />Certified with the <a href="https://www.privatetraininginstitutions.gov.bc.ca">Private Training Institutions Branch (PTIB)</a> of the BC Ministry of Advanced Education and Skills Training`,
       },
       prism: {
         theme: lightCodeTheme,

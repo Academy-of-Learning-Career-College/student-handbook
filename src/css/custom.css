@@ -854,3 +854,7 @@ white-space: nowrap;}
 table td {
     vertical-align: top;
 }
+
+.navbar__logo {
+    margin-left: 0.5em;
+}

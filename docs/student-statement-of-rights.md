@@ -26,4 +26,4 @@ You have the right to make a claim to PTIB for a tuition refund if:
  - your institution ceased to hold a certificate before you completed an approved program
  - you were misled about a significant aspect of your approved program. You must file the claim within one year of completing, being dismissed or withdrawing from your program.
 
-For more information about PTIB and how to be an informed student, go to: [http://www.privatetraininginstitutions.gov.bc.ca/students/be-an-informed-student](http://www.privatetraininginstitutions.gov.bc.ca/students/be-an-informed-student).
+> For more information about PTIB and how to be an informed student, go to: [http://www.privatetraininginstitutions.gov.bc.ca/students/be-an-informed-student](http://www.privatetraininginstitutions.gov.bc.ca/students/be-an-informed-student).

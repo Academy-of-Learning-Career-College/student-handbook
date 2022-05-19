@@ -8,7 +8,7 @@ sidebar_position: 1
 To improve the lives of underserved students and the communities in which they live. Globally, our flexible, supportive environment empowers dedicated students to achieve their goals.
 
 ## Our Promises
-$ We will:
+### We will:
 
  - Meet your individual training needs.
  - Demonstrate a genuine concern for your career success.
