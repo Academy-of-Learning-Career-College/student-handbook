@@ -109,7 +109,7 @@ const config = {
               },
               {
                 label: 'Student Handbook',
-                to: 'docs/Handbook'
+                to: 'docs/'
               },
               {
                 type: 'html',
@@ -151,15 +151,15 @@ const config = {
             items: [
               {
                 label: 'Privacy Policy',
-                to: '/docs/Handbook/privacy-policy',
+                to: '/docs/privacy-policy',
               },
               {
                 label: 'Dispute Resolution Policy',
-                to: '/docs/Handbook/academic-policies/dispute-resolution',
+                to: '/docs/academic-policies/dispute-resolution',
               },
               {
                 label: 'Sexual Harassment Policy',
-                href: '/docs/Handbook/general-info/health-and-safety/sexual-harrassment',
+                href: '/docs/general-info/health-and-safety/sexual-harrassment',
               },
               {
                 label: 'Student Statement of Rights',
@@ -167,11 +167,11 @@ const config = {
               },
               {
                 label: 'Refund Policy',
-                href: '/docs/Handbook/academic-policies/refunds',
+                href: '/docs/academic-policies/refunds',
               },
               {
                 label: 'System Requirements',
-                href: '/docs/Handbook/general-info/system-requirements',
+                href: '/docs/general-info/system-requirements',
               }
             ],
           },
