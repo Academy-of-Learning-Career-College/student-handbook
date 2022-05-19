@@ -87,4 +87,4 @@ Except where noted above, one or more of the following penalties may be imposed 
 If you have good reason to believe you are being harassed:
 
 1. Ask the offender to stop: As harassment is often unintentional, asking to stop the behavior often puts an end to the harassment. The best way to deal with it is to assertively tell the person(s) that their behavior is unwelcome or offensive and must stop.
-1. Seek assistance: If the person persists in the behavior that you deem to be harassing, seek assistance by reporting the incident to the Director. Please see the [Preventing and Responding to Sexual Violence and Misconduct Policy](sexual-harrassment)
+1. Seek assistance: If the person persists in the behavior that you deem to be harassing, seek assistance by reporting the incident to the Director. Please see the [Preventing and Responding to Sexual Violence and Misconduct Policy](/docs/general-info/health-and-safety/sexual-harrassment)
