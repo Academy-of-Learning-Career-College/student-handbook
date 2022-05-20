@@ -30,9 +30,10 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} | Home`}
+      description="Acdemy of Learning Career College">
       <HomepageHeader />
+      <link rel="stylesheet" href="./custom.css" / >
       <main>
         
         <div className="container-fluid">

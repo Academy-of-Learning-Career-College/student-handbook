@@ -1,7 +1,4 @@
-
-    filterSelection("all") // Execute the function and show all columns
-
-    function filterSelection(c) {
+export function filterSelection(c) {
         var x, i;
         x = document.getElementsByClassName("column");
         if (c == "all") c = "";
@@ -13,7 +10,7 @@
     }
 
     // Show filtered elements
-    function w3AddClass(element, name) {
+export function w3AddClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
@@ -25,7 +22,7 @@
     }
 
     // Hide elements that are not selected
-    function w3RemoveClass(element, name) {
+export function w3RemoveClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
@@ -36,7 +33,9 @@
         }
         element.className = arr1.join(" ");
     }
-
+    
+export function InitFilter() {
+    filterSelection("all") // Execute the function and show all columns
     // Add active class to the current button (highlight it)
     var slidesbtnContainer = document.getElementById("myslidesbtnContainer");
     var slidesbtns = slidesbtnContainer.getElementsByClassName("slidesbtn");
@@ -47,3 +46,4 @@
             this.className += " active";
         });
     }
+}

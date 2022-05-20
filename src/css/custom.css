@@ -858,3 +858,11 @@ table td {
 .navbar__logo {
     margin-left: 0.5em;
 }
+
+.slide {
+    max-width: 273px;
+    background-color: pink;
+    border-style: none;
+    display:flex;
+    width:fit-content;
+}

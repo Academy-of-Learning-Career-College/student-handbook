@@ -5,7 +5,7 @@
 body {
     background-color: pink;
     
-    font-family: 'Courier New', Courier, monospace !IMPORTANT;
+    font-family: Arial;
 }
 
 .overlay {
@@ -118,10 +118,13 @@ h1 {
     color: white;
 }
 
+
 .slide {
     max-width: 273px;
-    /* background-color: white; */
+    background-color: pink;
     border-style: none;
+    display:flex;
+    width:fit-content;
 }
 
 .slide button {
