@@ -19,7 +19,8 @@ function buildSlideShow() {
 
 
             });
-            document.getElementById('slides').innerHTML = mycontent;
+            // document.getElementById('slides').innerHTML = mycontent;
+            return mycontent
 
 
 
