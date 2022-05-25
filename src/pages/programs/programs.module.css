@@ -99,7 +99,7 @@ h1 {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: white;
+    background-color: grey;
     cursor: pointer;
 }
 
@@ -161,4 +161,11 @@ vertical-align: top;text-align: left;border-right-color: var(--aol-black);border
 .program-info {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.categories {
+
+    background-color: #8ebf42;
+    font-style: italic;
+
 }

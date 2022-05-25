@@ -5,24 +5,53 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './programs.module.css';
 import data from './programlisting.json'
+// import data2 from './3500.json'
 
-console.log(data);
+// console.log(data);
+
+function CategoryList() {
+  let categories = data.map((programs) => 
+  programs.Category
+  )
+  categories.unshift('ALL')
+  
+  categories = Array.from(new Set(categories))
+  const indcategoriesDIV = categories.map((category, index) =>
+  <div className='slidesbtn' key={category + index}>
+    {category}
+    </div>
+  )
+
+  return (
+    <div className='categories'>
+      {indcategoriesDIV}
+    </div>
+  )
+
+}
+
 
 function ProgramList() {
 
 const programs = data;
+
+
+
+
+
 const programlistitems = programs.map((programs, index) =>
   
 
-  <div className='slide'>
+  <div key={index + programs.name} className='slide row'>
     <img src={'./images/' + programs.URL  + ".webp"} />
     <p>{programs.name}</p>
-</div>
+  </div>
 
 )
 
 return (
-  <div className='programlist'>
+ 
+ <div className='programlist table row container'>
     {programlistitems}
 
   </div>
@@ -55,12 +84,13 @@ export default function Home() {
       <HomepageHeader />
       
       <main>
-
+        <div className='programlisting'>
+        <CategoryList />
         <ProgramList />
-
-      <div id="programoverlay" className="overlay closed"></div>
-      <script src="buildoverlay.js"></script>
-        <script src="papaparse.min.js"></script>
+        </div>
+    
+      {/* <script src="buildoverlay.js"></script> */}
+        {/* <script src="papaparse.min.js"></script> */}
       
     
       </main>
@@ -70,4 +100,3 @@ export default function Home() {
   );
   
 }
-// getData('programlisting.csv');

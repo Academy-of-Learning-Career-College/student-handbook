@@ -861,8 +861,60 @@ table td {
 
 .slide {
     max-width: 273px;
-    background-color: pink;
+    /* background-color: pink; */
     border-style: none;
-    display:flex;
+    display:inline-block;
     width:fit-content;
+}
+
+
+.categories {
+    display: block;
+    
+
+}
+
+.slidesbtn {
+    background-color: grey;
+    color: white;
+    display: inline-block;
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    vertical-align: top !important;
+}
+
+.slidesbtn img {
+    vertical-align: top !important;
+    margin-top: 0px;
+    padding-top: 0px;
+    position: fixed;
+    top:0;
+}
+
+.active {
+    background-color: black;
+ 
+
+}
+
+.programlist {
+    display: block;
+    margin-top: 25px;
+}
+
+.programlisting {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    vertical-align: top;
+    
+}
+.slide {
+    height:100%;
+}
+.row {
+    color:#000 !important;
 }
