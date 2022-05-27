@@ -11,6 +11,7 @@ import data from './programlisting.json'
 import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'; '../../js/filter.js'
 import queryString from 'query-string'
 // console.log(data);
+import BuildProgramPage from '../../js/buildoverlay'
 
 
 
@@ -18,7 +19,7 @@ function GetQuery(){
   console.log(location.search);
   const parsed = queryString.parse(location.search);
   console.log(parsed);
-  return parsed.ni
+  return parsed.program
 }
 
 
@@ -31,49 +32,37 @@ function makeActiveButton(index) {
 }
 
 
+function GenerateProgramPage() {
 
-function CategoryList() {
-  let categories = data.map((programs) => 
-  programs.Category
-  )
-  categories.unshift('All')
-  
-  categories = Array.from(new Set(categories))
-  const defaultClassName = "slidesbtn"
-  const indcategoriesDIV = categories.map((category, index) =>
-  
+const programinfo1 = data.find(element => element.URL == GetQuery())
+const programPageVars = [
+    {}
+]
 
-    <button className={defaultClassName + makeActiveButton(index)}  key={category + index} id={category} onClick={() => filterSelection(category)}>
-    {category}
-    </button>
-  )
 
-  return (
-    <div className='categories'>
-      {indcategoriesDIV}
-    </div>
-  )
+return (
+    <><h3>{programinfo1.name}</h3><img src={'./images/full/' + programinfo1.URL  + "_full_size.webp"} /><h3>Program Info</h3>
+    <BuildProgramPage programnameasurl={programinfo1.URL} programname={programinfo1.name} programtype={programinfo1.Category} hide_data_table={false} />
+    </>
+    
+)
 
 }
 
 
 function ProgramList() {
 
-const programs = data;
-
-
-
 
 
 const programlistitems = programs.map((programs, index) =>
   
 
-  <a href={'info?program=' + programs.URL}><div key={index + programs.name} className={`column cards ${programs.Category} show` }>
+  <div key={index + programs.name} className={`column cards ${programs.Category} show` }>
     <div className="content">
     <img src={'./images/' + programs.URL  + ".webp"} alt={programs.name}/>
     <p>{programs.name}</p>
     </div>
-  </div></a>
+  </div>
 
 )
 
@@ -104,20 +93,10 @@ export default function Home() {
       title={`${siteConfig.title} | Programs`}
       description="Programs">
       <HomepageHeader />
-      <GetQuery />
+      
       <main>
-      <div className='row'>
-     
-        <div className='programlisting row'>
-        <CategoryList />
-        <script>
-        InitFilter()
-        </script>
-        <ProgramList />
-        </div>
-        </div>
-    
-
+      
+    <GenerateProgramPage />
       
     
       </main>

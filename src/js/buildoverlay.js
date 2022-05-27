@@ -9,9 +9,11 @@ var programs_with_no_data_table = {
     "program" : "english_as_a_second_language"
 }
 
+function setData(content){
+    const programContent = content;
+}
 
-
-export default function overlayprogram(programnameasurl, programname, programtype) {
+function overlayprogram(programnameasurl, programname, programtype) {
 
     // Get Navbar bottom pos
     navbar = document.getElementById('navbar')
@@ -24,7 +26,7 @@ export default function overlayprogram(programnameasurl, programname, programtyp
     hideshowElementById('maincontent','hide')
     hide_data_table = programs_with_no_data_table.program.includes(programnameasurl)
     // alert(`I will be sending ${hide_data_table} for hide_data_table because ${programnameasurl} is not in ${programs_with_no_data_table}`)
-    othercontent = '';
+    let othercontent = '';
     // console.log(`I sent ${programnameasurl} ${programname} ${programtype} ${hide_data_table}`);
     buildProgramPage(programnameasurl, programname, programtype, hide_data_table);
 
@@ -42,36 +44,27 @@ function toCAD(amount,element) {
     }
         
     }
+
+export default function buildProgramPage(programnameasurl, programname, programtype, hide_data_table) {
+        console.log(programnameasurl, programname, programtype, hide_data_table)
+        return <p>Loaded</p>
+    }
+
+
+
+export function buildProgramPage2(programnameasurl, programname, programtype, hide_data_table) {
+    console.log(programnameasurl, programname, programtype, hide_data_table);
     
-function buildProgramPage(programnameasurl, programname, programtype, hide_data_table) {
     
-
-   
-    try {
-
-        
-
-
-        //console.log("I received " + programnameasurl + ' ' + programname + ' ' + programtype);
-        
-        const credential = programtype;
-        const overlay = document.getElementById('programoverlay')
-        const closebutton = `<button class="closebutton" onClick="closeOverlay();">X<br />Close</button>`
-        document.addEventListener('keydown', function(event) {
-            if (event.keyCode == 27) {
-                closeOverlay();
-            }
     
-        });
-        othercontent = ''
-        JSONFile = "data/" + programnameasurl + "_programdata.json";
-        proglistingJSONFile = "data/3500.json";
-        fullImage = "images/full/" + programnameasurl + "_full_size.webp";
-        
-        //console.log(JSONFile);
-        smorg = "smorgs/" + programnameasurl + "_" + programtype.toLowerCase() + ".pdf"
-        console.log(`I am grabbing ${JSONFile}, ${proglistingJSONFile}, ${smorg} and ${fullImage}`)
-        fetch(JSONFile)
+    const credential = programtype;
+    let othercontent = ''
+    let JSONFile = "./data/" + programnameasurl + "_programdata.json";
+    console.log(JSONFile);
+    let proglistingJSONFile = "data/3500.json";
+    let fullImage = "images/full/" + programnameasurl + "_full_size.webp";
+    let smorg = "smorgs/" + programnameasurl + "_" + programtype + ".pdf"
+    fetch(JSONFile)
             .then(function(response) {
                 ///console.log(response);
                 if (response.status == 404) {
@@ -411,43 +404,34 @@ function buildProgramPage(programnameasurl, programname, programtype, hide_data_
 
                                     }
                                     // console.log(`Here is the DIV's content: \n${othercontent}`);
-                                    overlay.innerHTML = `${closebutton} ${prog_info_array[0].top} ${prog_info_array[0].left} ${prog_info_array[0].middle} ${prog_info_array[0].right}</div> `
+                                    content = `${prog_info_array[0].top} ${prog_info_array[0].left} ${prog_info_array[0].middle} ${prog_info_array[0].right}</div> `
                                     
+                                    setData(content)
                                     if (workexphours === undefined) {
                                         document.getElementById('workexphours').innerHTML = '';
                                     }
+                            return content;
+
                                 } else {
                                     //console.log('there was an issue')
                                 };
   
     
+                                return content;
     
                             }
     
-    
                         );
                         ///console.log(othercontent);
-                        return othercontent;
+                        return content;
                     })
     
                 //console.log(othercontent);
     
-                return othercontent;
+                return content;
                 ///console.log(othercontent);
             }) //console.log(othercontent);
-            // return othercontent;
-    } catch (error) {
-        // alert(error)
-    }
-        
-    }
-    
-    function closeOverlay() {
-        hideshowElementById('programoverlay','hide');
-        emptyElementByID('programoverlay')
-        hideshowElementById('maincontent','show');
-        emptyElementByID('programoverlay');
-        //window.scrollTo(0, 0)
-    }
-    ;
+return content
+}
+
     

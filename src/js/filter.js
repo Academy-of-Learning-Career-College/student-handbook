@@ -1,7 +1,8 @@
 export function filterSelection(c) {
         var x, i;
         x = document.getElementsByClassName("column");
-        if (c == "all") c = "";
+        if (c == "All") c = "";
+        // console.log(c);
         // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
         for (i = 0; i < x.length; i++) {
             w3RemoveClass(x[i], "show");
@@ -34,7 +35,7 @@ export function w3RemoveClass(element, name) {
         element.className = arr1.join(" ");
     }
     
-export function InitFilter() {
+export default function InitFilter() {
     filterSelection("all") // Execute the function and show all columns
     // Add active class to the current button (highlight it)
     var slidesbtnContainer = document.getElementById("myslidesbtnContainer");
