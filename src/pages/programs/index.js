@@ -9,17 +9,12 @@ import styles from './programs.module.css';
 import data from './programlisting.json'
 // import data2 from './3500.json'
 import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'; '../../js/filter.js'
-import queryString from 'query-string'
+
 // console.log(data);
 
 
 
-function GetQuery(){
-  console.log(location.search);
-  const parsed = queryString.parse(location.search);
-  console.log(parsed);
-  return parsed.ni
-}
+
 
 
 function makeActiveButton(index) {
@@ -104,7 +99,7 @@ export default function Home() {
       title={`${siteConfig.title} | Programs`}
       description="Programs">
       <HomepageHeader />
-      <GetQuery />
+
       <main>
       <div className='row'>
      

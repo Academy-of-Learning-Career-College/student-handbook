@@ -1,3 +1,21 @@
+import React, { useEffect, useState } from "react";
+import { lazy, Suspense } from "react"
+import mainlist from '../pages/programs/programlisting.json'
+import ptibdata from '../pages/programs/3500.json'
+
+
+function setHeader(override,defaultvalue) {
+    if (!override) {
+        return defaultvalue
+    } else {
+        return override
+    }
+}
+
+function log(e){
+    console.log(e);
+}
+
 var headings = [{
     "a1" : "Admission Requirements",
     "a2" : "Program Highlights",
@@ -13,29 +31,8 @@ function setData(content){
     const programContent = content;
 }
 
-function overlayprogram(programnameasurl, programname, programtype) {
 
-    // Get Navbar bottom pos
-    navbar = document.getElementById('navbar')
-    window.scrollTo(0, 0)
-    overlaytop = navbar.offsetHeight;
-    // Show Overlay
-    hideshowElementById('programoverlay','show',null,overlaytop);
- 
-    // Hide Slideshow
-    hideshowElementById('maincontent','hide')
-    hide_data_table = programs_with_no_data_table.program.includes(programnameasurl)
-    // alert(`I will be sending ${hide_data_table} for hide_data_table because ${programnameasurl} is not in ${programs_with_no_data_table}`)
-    let othercontent = '';
-    // console.log(`I sent ${programnameasurl} ${programname} ${programtype} ${hide_data_table}`);
-    buildProgramPage(programnameasurl, programname, programtype, hide_data_table);
-
-
-}
-
-
-
-function toCAD(amount,element) {
+function toCAD(amount) {
 
     try {
         return `\$${amount.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0 })}`
@@ -45,11 +42,289 @@ function toCAD(amount,element) {
         
     }
 
-export default function buildProgramPage(programnameasurl, programname, programtype, hide_data_table) {
-        console.log(programnameasurl, programname, programtype, hide_data_table)
-        return <p>Loaded</p>
+export default function buildProgramPage(data) {
+    //vars
+    
+    let URL = data.programnameasurl
+    let NAME = data.programname
+    let TYPE = data.programtype
+    let HIDEDT = data.hide_data_table
+    let smorg = "smorgs/" + URL + "_" + TYPE + ".pdf"
+    
+
+    
+        
+    useEffect(() => {
+        const fetchData = async () => {
+          const response = await fetch(`./data/${URL}_programdata.json`);
+          const newData = await response.json();
+          setData(newData);
+        };
+      
+        fetchData();
+      }, [URL]);
+      const [data2, setData] = useState(null);
+      if (data2) {
+       // let admitreq_array = data2.heading[0].a1
+
+
+        // vitalinfo = {
+        //     "progtitle" : NAME,
+        //     "full" : "images/full/" + URL + "_full_size.webp",
+        //     "a1" : a1,
+        //     "admitreq" : admitreq,
+        //     "a2" : a2,
+        //     "programhighlights" : programhighlights,
+        //     "a3" : a3,
+        //     "careeropp" : careeropp,
+        //     "a4" : a4,
+        //     "a5" : a5,
+        //     "corecourses" : corecourses,
+        //     "programtype" : programtype,
+        //     "salarystart" : salarystart,
+        //     "salaryend" : salaryend,
+        //     "programduration" : programduration,
+        //     "programhours" : programhours,
+        //     "workexphours" : workexphours,
+        //     "dtuition" : dtuition,
+        //     "ituition" : ituition,
+        //     "dapp" : dapp,
+        //     "iapp" : iapp,
+        //     "dassess" : dassess,
+        //     "textbooks1" : textbooks1,
+        //     "coursemat" : coursemat_html,
+        //     "dother" : dother,
+        //     "smorg" : smorg
+        // }
+
+        //   console.log(data2);
+        if (data2.admitreq.headings[0]?.a1) {
+            log()
+        }
+
+        // let admitreq_heading = setHeader(,'Admissions Requirements')
+        
+        log(admitreq_heading)
+            
+            
+            let admitreqdiv = generatesection(data2.admitreq, admitreq_heading)
+            let programhighlightsdiv = generatesection(data2.programhighlights, 'Program Highlights')
+            let careeroppdiv = generatesection(data2.careeropp, 'Career Opportunities')
+            let corecoursesdiv = generateCoursesList(data2.corecourses)
+            let programdataBox = generateDataBox(data2, NAME)
+        return (
+         
+            <div>
+            {admitreqdiv}
+            {programhighlightsdiv}
+            {careeroppdiv}
+            {corecoursesdiv}
+            {programdataBox}
+            </div>   
+        )
+      } else {
+        return null;
+      }
+    
     }
 
+function generateDataBox(e,name){
+
+    // let programvitals = mainlist.find(program => program.name === name)
+    // let ptibinfo = ptibdata.programs.filter(e => e.name === name)
+    // log(ptibinfo)
+    // let ptibvitals = ptibdata.programs.find(e => e.name === name)
+    
+    let databoxinfofromptib = ptibdata.programs.filter((p) => p.name.toLowerCase() === name.toLowerCase())
+    
+
+return (
+<table>
+<tr><td>Program Type: </td><td>{e.programtype}</td></tr>
+<tr><td>Anticipated Salary: </td><td>${e.salarystart.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0 })} - ${e.salarystart.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0 })}</td></tr>
+<tr><td>Program Duration </td><td></td></tr>
+
+
+</table>
+    
+)
+
+
+}
+
+function generateCoursesList(e){
+    let courselist = e.paragraphs.map((c,i) => {
+        if (c.ul_start){ return }
+        if (c.ul_end){ return }
+        
+        return (
+            <li><b>{c.li_title}</b><br />{c.content}</li>
+         )
+    }
+    )
+    return (
+        <div>
+            <h3>Core Courses</h3>
+        <ul>
+            {courselist}
+        </ul>
+        </div>
+    )
+    
+}
+    
+function generatesection(e, title) {
+    //console.log(`I got ${array.paragraphs} and ${title}`);
+    //console.log(array.paragraphs);
+    //admitreq.paragraphs[0].style
+    let what = e.paragraphs.map((c, i) => {
+       return (
+        <div className={c.style}>
+        
+               {c.content}
+        </div>
+        
+       )
+    }   
+    )
+    return (
+       <div id={title}>
+        <h3>{title}</h3>
+        {what}
+        </div>
+    )
+}
+
+
+
+function generateFullDiv(){
+    return [{
+    "top" : `
+   <div class="container-flex center">
+   <h1>
+       <div id="progtitle" class="progtitle1">${progtitle}</div>
+   </h1>
+</div>
+<div class="container-flex center">
+   <div id="fullimage"><img src=${fullImage} alt='Program Image'></div>
+</div>`,
+"left" :`
+<div class="container-flex program-info" id="program-info">
+   <div class="header lefthr">
+       <h1>Program Info:</h1>
+   </div>
+   <div class="d-md-flex flex-row ">
+       <div class="p-2 col1">
+           <div class="container">
+               <h2>${a1}</h2>
+               <div id="admitreq">${admitreq}</div>
+           </div>
+           <div class="container">
+               <h2>${a2}</h2>
+           </div>
+           <div class="container">
+               <div id="programhighlights">${programhighlights}</div>
+           </div>
+       </div>
+       <div class="p-2 col2">
+           <div class="textleft">
+               <div class="container">
+                   <h2>${a3}</h2>
+               </div>`,
+               "middle" : `
+               <div class="container">
+                   <div id="careeropp">${careeropp}</div>
+               </div>
+           </div>
+           <div>
+               <div class="container">
+                   <h2>${a4}</h2>
+               </div>
+               <div class="container">
+                   <p>${a5}</p>
+                   <div id="corecourses">${corecourses}</div>
+               </div>
+           </div>
+       </div>`,
+   "right" : `
+       <div class="p-2 programdatacol" id="progdatatable">
+           <table class="progdata">
+               <tbody>
+                   <tr>
+                       <td class="title title_with_emoji">
+                       <i class="fas fa-scroll"></i>&nbsp;Program&nbsp;Type:</td>
+                       <td colspan="2">${programtype}</td>
+                   </tr>
+                   <tr>
+                       <td class="title title_with_emoji"><i class="fas fa-search-dollar"></i>&nbsp;Anticipated&nbsp;Salary:</td>
+                       <td colspan="2">${salarystart} &ndash; ${salaryend}
+                       </td>
+                   </tr>
+                   <tr class="tr-nobottomborder">
+                       <td class="title title_with_emoji"><i class="fas fa-calendar"></i>&nbsp;Program&nbsp;Duration:</td>
+                       <td id="duration"colspan="2">
+                           Weeks: ${programduration}<br>
+                           Hours: ${programhours} <br>
+                           <p id="workexphours">${workexphours}</p>
+                           
+                       </td>
+                   </tr>
+                   <tr class="tr-notopborder tr-nobottomborder">
+                       <td colspan="3">
+                           <h3>Tuition Fees</h3>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="title">Tuition:</td>
+                       <td>${dtuition}</td>
+                       <td>${ituition}</td>
+                   </tr>
+                   <tr>
+                       <td class="title">Application:</td>
+                       <td>${dapp}</td>
+                       <td>${dapp}</td>
+                   </tr>
+                   <tr>
+                       <td class="title">Assessment:</td>
+                       <td>${dassess}</td>
+                       <td>${dassess}</td>
+                   </tr>
+                   ${textbooks1}
+                   ${coursemat_html}
+
+                   <tr>
+                       <td class="title">Other Fees:</td>
+                       <td>${dother}</td>
+                       <td>${dother}</td>
+                   </tr>
+                   <tr>
+                       <td class="title">Program Syllabus:</td>
+                       <td colspan="2"><a href="${smorg}" target="_blank">Click here to Download</a></td>
+                                                                        
+                   </tr>
+                   <tr>
+                   <td class="title">Program Notes</td>
+                   
+                   <td colspan="2" class="breaksallowed">
+                   Tuition fees include digital course materials. <br> 
+                   Printed copies may be available for an additional fee.<br>
+                   Financial Assistance may be available for those who qualify.
+                   </td></tr>
+                   <tr><td class="title">Graduation Requirements</td>
+                   <td colspan="2" class="breaksallowed">
+                   Students must maintain a 75% program average to obtain a ${programtype}
+                   </td>
+                   </tr>
+                   <tr class="tr-nobottomborder">
+                   <td class="title">Method of Delivery</td>
+                   <td colspan="2" class="breaksallowed">
+                   Onsite, Remote and Blended using our <br>Integrated Learning &reg;System training facilitated by qualified learning coaches.
+                   </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>`
+   }]}
 
 
 export function buildProgramPage2(programnameasurl, programname, programtype, hide_data_table) {

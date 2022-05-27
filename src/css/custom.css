@@ -943,3 +943,8 @@ table td {
 .row, .row>.column {
     padding: 8px;
 }
+
+.b {
+    font-style: oblique;
+    font-weight: bold;
+}

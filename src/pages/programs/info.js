@@ -1,5 +1,4 @@
 // TODO: Add Live Search
-
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
@@ -8,9 +7,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './programs.module.css';
 import data from './programlisting.json'
 // import data2 from './3500.json'
-import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'; '../../js/filter.js'
+import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'
 import queryString from 'query-string'
-// console.log(data);
+
 import BuildProgramPage from '../../js/buildoverlay'
 
 
