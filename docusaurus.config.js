@@ -81,6 +81,10 @@ const config = {
             to: "/locations"
           },
           {
+            label: "Programs",
+            to: "/programs"
+          },
+          {
             label: "About Us",
             to: "/aboutus"
           },

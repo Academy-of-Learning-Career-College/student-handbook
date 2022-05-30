@@ -40,7 +40,7 @@ const programPageVars = [
 
 
 return (
-    <><h3>{programinfo1.name}</h3><img src={'./images/full/' + programinfo1.URL  + "_full_size.webp"} /><h3>Program Info</h3>
+    <><div className='programheader'><h3>{programinfo1.name}</h3><img src={'./images/full/' + programinfo1.URL  + "_full_size.webp"} /></div><h3>Program Info</h3>
     <BuildProgramPage programnameasurl={programinfo1.URL} programname={programinfo1.name} programtype={programinfo1.Category} hide_data_table={false} />
     </>
     

@@ -3,6 +3,39 @@ import { lazy, Suspense } from "react"
 import mainlist from '../pages/programs/programlisting.json'
 import ptibdata from '../pages/programs/3500.json'
 
+const prognotes = `
+Tuition fees include digital course materials.
+Printed copies may be available for an additional fee.
+Financial Assistance may be available for those who qualify.
+`
+
+const gradreq = `
+Students must maintain a 75% program average to obtain a 
+`
+
+const method = `
+Onsite, Remote and Blended using our
+Integrated Learning ®System training facilitated by qualified learning coaches.
+`
+
+
+function getPTIBData(progname){
+
+    try {
+let ourData = ptibdata.programs.filter(program => {return program.name.toLowerCase() === progname.toLowerCase()})
+
+if (ourData.length === 0) {
+    log(`There was an issue`)
+} else {
+    return ourData
+}
+} catch {
+    log(`There was an issue`)   
+}
+}
+
+
+
 
 function setHeader(override,defaultvalue) {
     if (!override) {
@@ -98,28 +131,55 @@ export default function buildProgramPage(data) {
         // }
 
         //   console.log(data2);
-        if (data2.admitreq.headings[0]?.a1) {
-            log()
-        }
+
+        let defaultheadings = new Array()
+
+       let i = 0
+        defaultheadings[i] = "Admissions Requirements"
+        i++
+        defaultheadings[i] = "Program Highlights"
+        i++
+        defaultheadings[i] = "Career Opportunities"
+        i++
+        defaultheadings[i] = "Core Courses"
+        
+        let altheadings = new Array()
+        i = 0
+        altheadings[i] = data2.admitreq.alt_heading
+        i++
+        altheadings[i] = data2.programhighlights.alt_heading
+        i++
+        altheadings[i] = data2.careeropp.alt_heading
+        i++
+        altheadings[i] = data2.corecourses.alt_heading
+        
 
         // let admitreq_heading = setHeader(,'Admissions Requirements')
         
-        log(admitreq_heading)
-            
-            
-            let admitreqdiv = generatesection(data2.admitreq, admitreq_heading)
-            let programhighlightsdiv = generatesection(data2.programhighlights, 'Program Highlights')
-            let careeroppdiv = generatesection(data2.careeropp, 'Career Opportunities')
-            let corecoursesdiv = generateCoursesList(data2.corecourses)
-            let programdataBox = generateDataBox(data2, NAME)
+        
+            let pagecontent = new Array()
+            i=0
+            pagecontent[i] =generatesection(data2.admitreq, defaultheadings[i], altheadings[i] )
+            i++
+            pagecontent[i] = generatesection(data2.programhighlights, defaultheadings[i], altheadings[i])
+            i++
+            pagecontent[i] = generatesection(data2.careeropp, defaultheadings[i], altheadings[i])
+            i++
+            pagecontent[i] = generateCoursesList(data2.corecourses, defaultheadings[i], altheadings[i])
+            i++
+            pagecontent[i] = generateDataBox(data2, URL, smorg)
         return (
          
-            <div>
-            {admitreqdiv}
-            {programhighlightsdiv}
-            {careeroppdiv}
-            {corecoursesdiv}
-            {programdataBox}
+            <div className="row">
+                <div className="col-md">
+                    
+            {pagecontent[0]}
+            {pagecontent[1]}</div>
+            <div className="col-md">
+            {pagecontent[2]}
+            {pagecontent[3]}</div>
+            <div className="col-md programdata">
+            {pagecontent[4]}</div>
             </div>   
         )
       } else {
@@ -128,43 +188,110 @@ export default function buildProgramPage(data) {
     
     }
 
-function generateDataBox(e,name){
+function generatedurationBox(ptib){
+    try {
+        log(`workexperience = ${ptib.name} `)
+    } catch {
+        log(`I can't find workexperience, ptib=${ptib}`)
+    }
+}
 
-    // let programvitals = mainlist.find(program => program.name === name)
-    // let ptibinfo = ptibdata.programs.filter(e => e.name === name)
-    // log(ptibinfo)
-    // let ptibvitals = ptibdata.programs.find(e => e.name === name)
-    
-    let databoxinfofromptib = ptibdata.programs.filter((p) => p.name.toLowerCase() === name.toLowerCase())
-    
+function generateOtherFeeRows(label,cost){
+    if(cost === undefined) {
+        return
+    } else {
+        cost = toCAD(cost)
+        return (
+            <tr><td>{label}</td><td>{cost}</td><td>{cost}</td></tr>
+        )
+    }
+}
 
+function generateDataBox(e,name, smorg){
+
+name = name.replaceAll("_"," ")
+let ptib = getPTIBData(name)
+let ptibData = new Array()
+
+
+ptib.map((what) => {
+    let i = 0
+ptibData[i] = `Hours: ${what.Duration[0].hours}`
+i++
+ptibData[i] = `Weeks: ${what.Duration[0].weeks}`
+i++
+ptibData[i] = what.Duration[0].workexperience
+if (ptibData[i] === undefined){ptibData[i]=''}
+i++
+ptibData[i] = what.Credential
+i++
+ptibData[i] = what.domestic[0].tuition
+i++
+ptibData[i] = what.domestic[0].application_fee
+i++
+ptibData[i] = what.domestic[0].assessment_fee
+i++
+ptibData[i] = what.domestic[0].textbooks
+i++
+ptibData[i] = what.domestic[0].coursematerials
+i++
+ptibData[i] = what.domestic[0].other
+i++
+ptibData[i] = what.domestic[0].administration_fee
+return ptibData
+  
+})
+//now I need to build the Duration box
+
+try {
 return (
+
 <table>
-<tr><td>Program Type: </td><td>{e.programtype}</td></tr>
-<tr><td>Anticipated Salary: </td><td>${e.salarystart.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0 })} - ${e.salarystart.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0 })}</td></tr>
-<tr><td>Program Duration </td><td></td></tr>
-
-
+<tbody>
+<tr><td>Program Type: </td><td colSpan={2}>{ptibData[3]}</td></tr>
+<tr><td>Anticipated Salary: </td><td colSpan={2}>{toCAD(e.salarystart)} - {toCAD(e.salarystart)}</td></tr>
+<tr><td>Program Duration </td><td colSpan={2}>
+    {ptibData[0]}<br />
+    {ptibData[1]}<br />
+    {ptibData[2]}
+</td></tr>
+<h3>Tuition Fees</h3>
+<tr><td>&nbsp;</td><td>Domestic</td><td>International</td></tr>
+<tr><td>Tuition</td><td>{toCAD(ptibData[4])}</td><td>{toCAD(ptibData[4]*1.3)}</td></tr>
+<tr><td>Application</td><td>{toCAD(ptibData[5])}</td><td>{toCAD(ptibData[5]*2)}</td></tr>
+<tr><td>Assessment</td><td>{toCAD(ptibData[6])}</td><td>{toCAD(ptibData[6])}</td></tr>
+{generateOtherFeeRows('Text Books', ptibData[7])}
+{generateOtherFeeRows('Course Materials', ptibData[8])}
+<tr><td>Other</td><td>{toCAD(ptibData[9])}</td><td>{toCAD(ptibData[9])}</td></tr>
+<tr><td>Program Syllabus</td><td colSpan={2}><a href={smorg}>Download</a></td></tr>
+<tr><td>Program Notes</td><td colSpan={2}>{prognotes}</td></tr>
+<tr><td>Graduation Requirements</td><td colSpan={2}>{gradreq}{ptibData[3]}</td></tr>
+<tr><td>Method of Delivery</td><td colSpan={2}>{method}</td></tr>
+    </tbody>
 </table>
     
 )
-
+} catch {
+    return ''
+}
 
 }
 
-function generateCoursesList(e){
+function generateCoursesList(e,title){
     let courselist = e.paragraphs.map((c,i) => {
+        let li_title = ''
         if (c.ul_start){ return }
         if (c.ul_end){ return }
-        
+        if (c.li_title) { li_title = `<b>${c.li_title}<br />` }
+
         return (
-            <li><b>{c.li_title}</b><br />{c.content}</li>
+            <li>{li_title}{c.content}</li>
          )
     }
     )
     return (
         <div>
-            <h3>Core Courses</h3>
+            <h3>{title}</h3>
         <ul>
             {courselist}
         </ul>
@@ -187,6 +314,9 @@ function generatesection(e, title) {
        )
     }   
     )
+
+    log(e)
+    log(title)
     return (
        <div id={title}>
         <h3>{title}</h3>
