@@ -220,18 +220,7 @@ body {
     }
 }
 
-@media all and (min-width:992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: none;
-        margin-top: 0
-    }
-    .navbar .nav-item:hover .nav-link {
-        color: #fff
-    }
-    .navbar .nav-item:hover .dropdown-menu {
-        display: block
-    }
-}
+
 
 .orangehr {
     border-top: 5px solid #e86404
@@ -718,7 +707,7 @@ hr {
     min-width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    backdrop-filter: saturate(180%) blur(20px);
+    
     z-index: 99999999999999 !important;
 }
 
@@ -974,4 +963,43 @@ h1, h2, h3, h4, h5 {
 }
 h1 {
     font-size: xx-large !important;
+}
+
+.clform2 {
+    
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: rgba(8, 68, 104, .7);
+    
+}
+
+/* DivTable.com */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
 }

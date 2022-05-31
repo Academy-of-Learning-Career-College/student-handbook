@@ -6,12 +6,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './programs.module.css';
 import data from './programlisting.json'
-// import data2 from './3500.json'
-import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'
 import queryString from 'query-string'
-
+import CallToActioniFrame from '../../components/calltoactioniframe';
 import BuildProgramPage from '../../js/buildoverlay'
-
 
 
 function GetQuery(){
@@ -22,26 +19,18 @@ function GetQuery(){
 }
 
 
-function makeActiveButton(index) {
-  if (index == 0) {
-    return " active"
-  } else {
-    return ""
-  }
-}
-
 
 function GenerateProgramPage() {
 
 const programinfo1 = data.find(element => element.URL == GetQuery())
-const programPageVars = [
-    {}
-]
-
-
+document.title = programinfo1.name
 return (
-    <><div className='programheader'><h3>{programinfo1.name}</h3><img src={'./images/full/' + programinfo1.URL  + "_full_size.webp"} /></div><h3>Program Info</h3>
+    <><div className='programheader'>
+      <h3>{programinfo1.name}</h3>
+      <img src={'./images/full/' + programinfo1.URL  + "_full_size.webp"} /></div>
+      <h3>Program Info</h3>
     <BuildProgramPage programnameasurl={programinfo1.URL} programname={programinfo1.name} programtype={programinfo1.Category} hide_data_table={false} />
+
     </>
     
 )
@@ -89,7 +78,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} | Programs`}
+      title={``}
       description="Programs">
       <HomepageHeader />
       
@@ -99,7 +88,7 @@ export default function Home() {
       
     
       </main>
-      {/* <InitFilter /> */}
+      <CallToActioniFrame />
     </Layout>
     
   );

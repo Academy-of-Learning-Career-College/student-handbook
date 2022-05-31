@@ -8,9 +8,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './programs.module.css';
 import data from './programlisting.json'
 // import data2 from './3500.json'
-import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter'; '../../js/filter.js'
-
+import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter';
+import CallToActioniFrame from '../../components/calltoactioniframe';
 // console.log(data);
+
 
 
 
@@ -56,27 +57,38 @@ function ProgramList() {
 
 const programs = data;
 
+const GenSlide = props => {
+  const { URL, cat, Name } = props;
 
-
-
-
-const programlistitems = programs.map((programs, index) =>
-  
-
-  <a href={'info?program=' + programs.URL}><div key={index + programs.name} className={`column cards ${programs.Category} show` }>
+  return (
+  <a href={'/student-handbook/programs/info?program=' + URL}><div className={`column cards ${cat} show` }>
     <div className="content">
-    <img src={'./images/' + programs.URL  + ".webp"} alt={programs.name}/>
-    <p>{programs.name}</p>
+    <img src={'./images/' + URL  + ".webp"} alt={Name}/>
+    <p>{Name}</p>
     </div>
   </div></a>
+  )
 
+}
+
+
+const programlistitems = programs.map((programs, index) => {
+    let key=index*Math.random()*558445*Math.random()
+    let props = {
+      URL:programs.URL,
+      cat:programs.Category,
+      Name:programs.name
+    }
+    return (
+      <GenSlide {...props} key={key} />
+    )
+}
 )
 
 return (
  
  <div className='programlist table'>
     {programlistitems}
-
   </div>
 )
 
@@ -112,7 +124,7 @@ export default function Home() {
         </div>
         </div>
     
-
+      
       
     
       </main>
