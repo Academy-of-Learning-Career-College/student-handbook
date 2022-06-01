@@ -4,6 +4,10 @@ import mainlist from '../data/programlisting.json'
 import ptibdata from '../data/3500.json'
 import HTMLReactParser from "html-react-parser";
 
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
+
+
 const create = React.createElement;
 
 const prognotes = `
@@ -171,11 +175,23 @@ export default function buildProgramPage(data) {
         pagecontent[i] = generateCoursesList(data2.corecourses, defaultheadings[i], altheadings[i])
         i++
         pagecontent[i] = generateDataBox(data2, URL, smorg, NAME)
-        return (
 
+        const ProgramPageHeader = function(){
+            return (
+                <div className={"programheader"}>
+                    <h3>{NAME}</h3>
+                    <img src={`./images/full/${URL}_full_size.webp`} alt={NAME} />
+                    <h3>Program Info</h3>
+                </div>
+                )
+        }
+
+
+        return (
+              
             <div className="row">
                 <div className="col-md">
-
+                    <ProgramPageHeader />
                     {pagecontent[0]}
                     {pagecontent[1]}</div>
                 <div className="col-md">
@@ -184,6 +200,7 @@ export default function buildProgramPage(data) {
                 <div className="col-md programdata">
                     {pagecontent[4]}</div>
             </div>
+
         )
     } else {
         return null;
@@ -215,40 +232,40 @@ function generateDataBox(e, name, smorg, NAME) {
     name = name.replaceAll("_", " ")
     let ptib = getPTIBData(NAME)
     let ptibData = new Array()
-try {
+    try {
 
-    ptib.map((what) => {
-        let i = 0
-        ptibData[i] = `Hours: ${what.Duration[0].hours}`
-        i++
-        ptibData[i] = `Weeks: ${what.Duration[0].weeks}`
-        i++
-        ptibData[i] = what.Duration[0].workexperience
-        if (ptibData[i] === undefined) { ptibData[i] = '' }
-        i++
-        ptibData[i] = what.Credential
-        i++
-        ptibData[i] = what.domestic[0].tuition
-        i++
-        ptibData[i] = what.domestic[0].application_fee
-        i++
-        ptibData[i] = what.domestic[0].assessment_fee
-        i++
-        ptibData[i] = what.domestic[0].textbooks
-        i++
-        ptibData[i] = what.domestic[0].coursematerials
-        i++
-        ptibData[i] = what.domestic[0].other
-        i++
-        ptibData[i] = what.domestic[0].administration_fee
-        ptibData.admin_fee = what.domestic[0].administration_fee
-        return ptibData
+        ptib.map((what) => {
+            let i = 0
+            ptibData[i] = `Hours: ${what.Duration[0].hours}`
+            i++
+            ptibData[i] = `Weeks: ${what.Duration[0].weeks}`
+            i++
+            ptibData[i] = what.Duration[0].workexperience
+            if (ptibData[i] === undefined) { ptibData[i] = '' }
+            i++
+            ptibData[i] = what.Credential
+            i++
+            ptibData[i] = what.domestic[0].tuition
+            i++
+            ptibData[i] = what.domestic[0].application_fee
+            i++
+            ptibData[i] = what.domestic[0].assessment_fee
+            i++
+            ptibData[i] = what.domestic[0].textbooks
+            i++
+            ptibData[i] = what.domestic[0].coursematerials
+            i++
+            ptibData[i] = what.domestic[0].other
+            i++
+            ptibData[i] = what.domestic[0].administration_fee
+            ptibData.admin_fee = what.domestic[0].administration_fee
+            return ptibData
 
-    })
-} catch {
-    log(`I cannot find ${name}`)
-    log(`I was looking for `)
-}
+        })
+    } catch {
+        log(`I cannot find ${name}`)
+        log(`I was looking for `)
+    }
     //now I need to build the Duration box
 
     try {
@@ -292,8 +309,8 @@ try {
 function generateCoursesList(e, title) {
     const CourseLI = props => {
         const { li_title, li_content } = props;
-        
-        
+
+
         if (!li_title) {
             return <li>{li_content}</li>
         } else {
@@ -309,7 +326,7 @@ function generateCoursesList(e, title) {
             li_title: c.li_title,
             li_content: c.content
         }
-        let key = Math.random()*Math.random()*12*Math.random()
+        let key = Math.random() * Math.random() * 12 * Math.random()
         return <CourseLI {...props} key={key} />
 
     }
@@ -330,7 +347,7 @@ function generatesection(e, title) {
     //console.log(array.paragraphs);
     //admitreq.paragraphs[0].style
     let what = e.paragraphs.map((c, i) => {
-        let key=Math.random()*Math.random()*Math.random()*Math.random()*5854425*Math.random()
+        let key = Math.random() * Math.random() * Math.random() * Math.random() * 5854425 * Math.random()
         return (
             <div className={c.style} key={key}>
 
