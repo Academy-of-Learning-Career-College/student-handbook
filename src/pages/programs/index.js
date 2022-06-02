@@ -11,7 +11,7 @@ import data from './programlisting.json'
 import { filterSelection, w3RemoveClass, w3AddClass, InitFilter } from '../../js/filter';
 import CallToActioniFrame from '../../components/calltoactioniframe';
 // console.log(data);
-
+import IframeResizer from 'iframe-resizer-react'
 
 
 
@@ -113,18 +113,16 @@ export default function Home() {
       <HomepageHeader />
 
       <main>
-      <div className='row'>
-     
-        <div className='programlisting row'>
-        <CategoryList />
-        <script>
-        InitFilter()
-        </script>
-        <ProgramList />
-        </div>
-        </div>
-    
-      
+
+        <IframeResizer
+          log
+          src={`${siteConfig.baseUrl}programs/programs/index.html`}
+          style={{ width: '1px', minWidth: '100%'}}
+          checkOrigin='false'
+          heightCalculationMethod="lowestElement"
+          inPageLinks
+
+        />
       
     
       </main>

@@ -1,6 +1,3 @@
-import BrowserOnly from '@docusaurus/BrowserOnly';
-
-
 var headings = [{
     "a1" : "Admission Requirements",
     "a2" : "Program Highlights",
@@ -14,7 +11,7 @@ var programs_with_no_data_table = {
 
 
 
-export function overlayprogram(programnameasurl, programname, programtype) {
+function overlayprogram(programnameasurl, programname, programtype) {
 
     // Get Navbar bottom pos
     navbar = document.getElementById('navbar')
@@ -46,7 +43,7 @@ function toCAD(amount,element) {
         
     }
     
-export default function buildProgramPage(programnameasurl, programname, programtype, hide_data_table) {
+function buildProgramPage(programnameasurl, programname, programtype, hide_data_table) {
     
 
    
@@ -115,7 +112,7 @@ export default function buildProgramPage(programnameasurl, programname, programt
                 // console.log(a3)
                 // console.log(a4)
                 // console.log(a5)
-                newMinWageDate = new Date(2022, 7, 1)
+                newMinWageDate = new Date(2022, 07, 01)
                 if (newMinWageDate < new Date()) {
                     bcminwage = 15.65;
                 } else {
@@ -445,7 +442,7 @@ export default function buildProgramPage(programnameasurl, programname, programt
         
     }
     
- export function closeOverlay() {
+    function closeOverlay() {
         hideshowElementById('programoverlay','hide');
         emptyElementByID('programoverlay')
         hideshowElementById('maincontent','show');
